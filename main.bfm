@@ -1,0 +1,3 @@
++^ Push 1 to the stack
+` Go into stack mode
++ Adds current cell and first stack together
