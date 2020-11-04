@@ -42,6 +42,7 @@ function matchType(val){
     "$": "func",
     "/": "env",
     "`": "env",
+    "~": "env",
     "\\": "goto",
     "|": "flag",
     "^": "stk",

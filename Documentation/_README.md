@@ -17,7 +17,6 @@ It is expected you know about BrainF's syntax first, and you can find a great tu
 - [Environment Variables](#Documentation/env.md)
 - [Force Quit](#Documentation/force_quit.md)
 - [Clear Cells](#Documentation/clear_cells.md)
-
 - [Reverse Operator](#Documentation/reverse_operator.md)
 
 > Some documentation may be outdated or deprecated, if this is the case, please let me know!
@@ -46,3 +45,4 @@ These are some tips or tricks that will come in handy
 - **v1.3** *Introduced new stack operations and new characters* `? ! &`
 - **v1.4** *More reverse operator functionality*
 - **v1.5** *Introduced comparative stack operations*
+- **v1.6** *Introduced relative stack with a new character* `~`

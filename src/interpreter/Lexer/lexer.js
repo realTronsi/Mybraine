@@ -1,8 +1,8 @@
 const { Token, whl_queue } = require("./token")
 const parse = require("../Parser/parser")
 
-const KEY = [">", "<", "+", "-", "[", "]", ".", ",", "{", "}", ":", "*", "/", "$", "\\", "|", "^", "_", "`", "?", "&", "!"]
-const TOKENS = []
+const KEY = [">", "<", "+", "-", "[", "]", ".", ",", "{", "}", ":", "*", "/", "$", "\\", "|", "^", "_", "`", "?", "&", "!", "~"]
+let TOKENS = []
 
 let index = 0
 

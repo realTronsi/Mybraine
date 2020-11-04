@@ -7,6 +7,7 @@ let await_goto = null
 let goto_rel = true
 let dnr = false
 let stk_mode = false
+let rel_mode = false
 const flags = []
 let stack = []
 const STK = []
@@ -53,10 +54,14 @@ function parse(TOKENS) {
 function handlePtr(t, TOKENS) {
   if (TOKENS[t].val == "?") {
     if (stk_mode) {
-      if (prev.val == "!") {
-        STK[p] = (stack[stack.length - 1] || 0)
+      if (rel_mode) {
+        STK[p] = stack[STK[p]] || 0
       } else {
-        STK[p] = (stack[0] || 0)
+        if (prev.val == "!") {
+          STK[p] = (stack[stack.length - 1] || 0)
+        } else {
+          STK[p] = (stack[0] || 0)
+        }
       }
     } else {
       STK[p] = p
@@ -73,17 +78,28 @@ function handlePtr(t, TOKENS) {
 
 function handleStk(t, TOKENS) {
   if (TOKENS[t].val == "^") {
-    if (prev.val == "!") {
-      stack.push(STK[p])
+    if (rel_mode) {
+      stack.push((STK[STK[p]]) || 0)
     } else {
-      stack.unshift(STK[p])
+      if (prev.val == "!") {
+        stack.push(STK[p])
+      } else {
+        stack.unshift(STK[p])
+      }
     }
   }
   if (TOKENS[t].val == "_") {
-    if (prev.val == "!") {
-      STK[p] = (stack.pop() || 0)
+    if (rel_mode) {
+      item = stack[STK[p]]
+      if (item)
+        stack.splice(STK[p], 1)
+      STK[p] = item || 0
     } else {
-      STK[p] = (stack.shift() || 0)
+      if (prev.val == "!") {
+        STK[p] = (stack.pop() || 0)
+      } else {
+        STK[p] = (stack.shift() || 0)
+      }
     }
   }
 }
@@ -157,10 +173,13 @@ function handleGoto(t, TOKENS) {
 
 
 function handleEnv(t, TOKENS) {
+  if (TOKENS[t].val == "~") {
+    rel_mode = !rel_mode
+  }
   if (TOKENS[t].val == "/") {
     if (stk_mode) {
       if (prev.val == "!") {
-        if(stack[0])
+        if (stack[0])
           stack[0] = Math.floor(STK[p] / (stack[0] || 1))
       } else {
         STK[p] = Math.floor(STK[p] / (stack[0] || 1))
@@ -307,7 +326,7 @@ function handleMvP(t, TOKENS) {
       if (await_goto == null) {
         if (stk_mode) {
           if (prev.val == "!") {
-            if(stack[0])
+            if (stack[0])
               stack[0] = STK[p] * (stack[0] || 0)
           } else {
             STK[p] = STK[p] * (stack[0] || 0)
@@ -330,7 +349,7 @@ function handleOpr(t, TOKENS) {
   if (TOKENS[t].val == "+") {
     if (stk_mode) {
       if (prev.val == "!") {
-        if(stack[0])
+        if (stack[0])
           stack[0] = STK[p] + (stack[0] || 0)
       } else {
         STK[p] = STK[p] + (stack[0] || 0)
@@ -342,7 +361,7 @@ function handleOpr(t, TOKENS) {
   if (TOKENS[t].val == "-") {
     if (stk_mode) {
       if (prev.val == "!") {
-        if(stack[0])
+        if (stack[0])
           stack[0] = STK[p] - (stack[0] || 0)
       } else {
         STK[p] = STK[p] - (stack[0] || 0)
