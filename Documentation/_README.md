@@ -45,3 +45,4 @@ These are some tips or tricks that will come in handy
 - **v1.2** *Introduced stack operations and a new character* `backtick`
 - **v1.3** *Introduced new stack operations and new characters* `? ! &`
 - **v1.4** *More reverse operator functionality*
+- **v1.5** *Introduced comparative stack operations*
