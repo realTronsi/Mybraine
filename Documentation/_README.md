@@ -16,7 +16,7 @@ It is expected you know about BrainF's syntax first, and you can find a great tu
 - [Force Quit](#Documentation/force_quit.md)
 - [Clear Cells](#Documentation/clear_cells.md)
 
-- [Reverse Operators](#Documentation/reverse_operator.md)
+- [Reverse Operator](#Documentation/reverse_operator.md)
 
 > Some documentation may be outdated or deprecated, if this is the case, please let me know!
 
@@ -31,6 +31,10 @@ These are some tips or tricks that will come in handy
 - [Pointer Jumping](#Documentation/pointer_jumping.md)
 
 > Some tips and tricks may be outdated or deprecated, if this is the case, please let me know!
+
+## Examples
+
+- [Fibonacci](#Documentation/fibonacci.md)
 
 ## Version History
 

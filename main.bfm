@@ -1,6 +1,6 @@
-+++++ set 5 to first cell
->>> go to third position
-?^ add pointer position to stack
-[-]*^ go to first cell and push its value to the stack
-!_* return to third position
-_
+/,
+[\>\]\$\
+|>+<-[\>\]\$\
+|>>+<<-[\>\]\$\
+|[>^>!^`+`>_<<_<-]
+>>.

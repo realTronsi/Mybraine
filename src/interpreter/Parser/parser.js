@@ -317,10 +317,14 @@ function handleOpr(t, TOKENS) {
     }
   }
   if (TOKENS[t].val == "-") {
-    if (prev.val == "!" && stack[0]) {
-      stack[0] = STK[p] - (stack[0] || 0)
+    if (stk_mode) {
+      if (prev.val == "!" && stack[0]) {
+        stack[0] = STK[p] - (stack[0] || 0)
+      } else {
+        STK[p] = STK[p] - (stack[0] || 0)
+      }
     } else {
-      STK[p] = STK[p] - (stack[0] || 0)
+    STK[p]--
     }
   }
 }
