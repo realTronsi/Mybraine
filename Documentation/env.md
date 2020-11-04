@@ -42,7 +42,7 @@ For output, during number mode, the user inputs will be pushed to the current ce
 
 ## ` - Backtick
 
-Toggles between normal mode and stack mode. If you don't know how to use the stack, go [here](https://repl.it/@realTronsi/BrainF#Documentation/using_the_stack.md) first. In stack mode many characters become operators, which can interact between the current cell and first value in the stack:
+Toggles between normal mode and stack mode. If you don't know how to use the stack, go [here](#Documentation/using_the_stack.md) first. In stack mode many characters become operators, which can interact between the current cell and first value in the stack:
 
 ```
 +^ Push 1 to the stack
@@ -63,4 +63,7 @@ curr / stack
 
 If the stack is empty, it will be replaced with either 0 or 1 (replaces with 1 in scenarios such as division)
 
-[go back](https://repl.it/@realTronsi/BrainF#Documentation/_README.md)
+More operators for the stack can be found [here](#Documentation/stack_operators.md)
+
+
+[go back](#Documentation/_README.md)

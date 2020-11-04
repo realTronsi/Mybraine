@@ -45,7 +45,10 @@ function matchType(val){
     "\\": "goto",
     "|": "flag",
     "^": "stk",
-    "_": "stk"
+    "_": "stk",
+    "?": "ptr",
+    "&": "ptr",
+    "!": "ptr"
   }
   return KEY[val]
 }

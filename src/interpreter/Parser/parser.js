@@ -8,7 +8,7 @@ let goto_rel = true
 let dnr = false
 let stk_mode = false
 const flags = []
-const stack = []
+let stack = []
 const STK = []
 for (let i = 0; i < 30000; i++) {
   STK.push(0)
@@ -35,8 +35,10 @@ function parse(TOKENS) {
         handleEnv(t, TOKENS)
       } else if (TOKENS[t].type == "goto") {
         t = handleGoto(t, TOKENS)
-      } else if(TOKENS[t].type == "stk"){
+      } else if (TOKENS[t].type == "stk") {
         handleStk(t, TOKENS)
+      } else if (TOKENS[t].type == "ptr") {
+        handlePtr(t, TOKENS)
       }
     } else {
       if (TOKENS[t].type == "func")
@@ -48,12 +50,41 @@ function parse(TOKENS) {
   printSTK()
 }
 
-function handleStk(t, TOKENS){
-  if(TOKENS[t].val == "^"){
-    stack.unshift(STK[p])
+function handlePtr(t, TOKENS) {
+  if (TOKENS[t].val == "?") {
+    if (stk_mode) {
+      if (prev.val == "!") {
+        STK[p] = (stack[stack.length - 1] || 0)
+      } else {
+        STK[p] = (stack[0] || 0)
+      }
+    } else {
+      STK[p] = p
+    }
   }
-  if(TOKENS[t].val == "_"){
-    STK[p] = stack.shift()
+  if (TOKENS[t].val == "&") {
+    if (stk_mode) {
+      stack = []
+    } else {
+      STK.fill(0, 0, 29999)
+    }
+  }
+}
+
+function handleStk(t, TOKENS) {
+  if (TOKENS[t].val == "^") {
+    if (prev.val == "!") {
+      stack.push(STK[p])
+    } else {
+      stack.unshift(STK[p])
+    }
+  }
+  if (TOKENS[t].val == "_") {
+    if (prev.val == "!") {
+      STK[p] = (stack.pop() || 0)
+    } else {
+      STK[p] = (stack.shift() || 0)
+    }
   }
 }
 
@@ -127,13 +158,17 @@ function handleGoto(t, TOKENS) {
 
 function handleEnv(t, TOKENS) {
   if (TOKENS[t].val == "/") {
-    if(stk_mode){
-      STK[p] = STK[p]/(stack[0]||1)
+    if (stk_mode) {
+      if (prev.val == "!" && stack[0]) {
+        stack[0] = Math.floor(STK[p] / (stack[0] || 1))
+      } else {
+        STK[p] = Math.floor(STK[p] / (stack[0] || 1))
+      }
     } else {
       out_ascii = !out_ascii
     }
   }
-  if(TOKENS[t].val == "`"){
+  if (TOKENS[t].val == "`") {
     stk_mode = !stk_mode
   }
 }
@@ -215,14 +250,14 @@ function handleIo(t, TOKENS) {
   if (TOKENS[t].val == ",") {
     input = readline.question("")
     if (input) {
-      if(out_ascii){
+      if (out_ascii) {
         STK[p] = input[0].charCodeAt()
       } else {
         STK[p] = Number(input)
-        if(STK[p]==NaN)STK[p]=0
+        if (STK[p] == NaN) STK[p] = 0
       }
     } else {
-      if(out_ascii){
+      if (out_ascii) {
         STK[p] = 10
       } else {
         STK[p] = 0
@@ -249,8 +284,12 @@ function handleMvP(t, TOKENS) {
     }
     if (TOKENS[t].val == "*") {
       if (await_goto == null) {
-        if(stk_mode){
-          STK[p] = STK[p]*(stack[0]||0)
+        if (stk_mode) {
+          if (prev.val == "!" && stack[0]) {
+            stack[0] = STK[p] * (stack[0] || 0)
+          } else {
+            STK[p] = STK[p] * (stack[0] || 0)
+          }
         } else {
           p = STK[p]
         }
@@ -266,18 +305,22 @@ function handleMvP(t, TOKENS) {
 }
 
 function handleOpr(t, TOKENS) {
-  if (TOKENS[t].val == "+"){
-    if(stk_mode){
-      STK[p] = STK[p]+(stack[0]||0)
+  if (TOKENS[t].val == "+") {
+    if (stk_mode) {
+      if (prev.val == "!" && stack[0]) {
+        stack[0] = STK[p] + (stack[0] || 0)
+      } else {
+        STK[p] = STK[p] + (stack[0] || 0)
+      }
     } else {
       STK[p]++
     }
   }
-  if (TOKENS[t].val == "-"){
-    if(stk_mode){
-      STK[p] = STK[p]-(stack[0]||0)
+  if (TOKENS[t].val == "-") {
+    if (prev.val == "!" && stack[0]) {
+      stack[0] = STK[p] - (stack[0] || 0)
     } else {
-      STK[p]--
+      STK[p] = STK[p] - (stack[0] || 0)
     }
   }
 }
@@ -291,7 +334,11 @@ function printSTK() {
     for (let i = 0; i <= p - 1; i++) {
       output = output + String(STK[i]) + " "
     }
-    console.log(`${output}[${STK[p]}]`)
+    let output2 = " "
+    for (let i = p + 1; i <= 5; i++) {
+      output2 = output2 + String(STK[i]) + " "
+    }
+    console.log(`${output}[${STK[p]}]${output2}`)
   }
 }
 

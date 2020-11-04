@@ -1,6 +1,6 @@
 # If Statements
 
-You can use [loop breaks](https://repl.it/@realTronsi/BrainF#Documentation/break_from_loops.md) to simulate if statements
+You can use [loop breaks](#Documentation/break_from_loops.md) to simulate if statements
 
 This checks if the current cell block is 3, and if so, it prints out the value of the current cell
 
@@ -64,6 +64,6 @@ if(*p==3){
 }
 ```
 
-#### Keep in mind these if statements edit the cell directly, you can use [this](https://repl.it/@realTronsi/BrainF#Documentation/duplicate_cells.md) trusty code to copy a cell twice, which you can store in a [function](https://repl.it/@realTronsi/BrainF#Documentation/functions.md) for easy use
+#### Keep in mind these if statements edit the cell directly, you can use [this](https://repl.it/@realTronsi/BrainF#Documentation/duplicate_cells.md) trusty code to copy a cell twice, which you can store in a [function](#Documentation/functions.md) for easy use
 
-[go back](https://repl.it/@realTronsi/BrainF#Documentation/_README.md)
+[go back](#Documentation/_README.md)

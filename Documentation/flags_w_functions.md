@@ -14,4 +14,4 @@ We are using the function to goto flags, notice how we aren't closing the backsl
 
 This is why we have `:\`, which calls the function then closes the backslashes, and jumping 2 flags to the right.
 
-[go back](https://repl.it/@realTronsi/BrainF#Documentation/_README.md)
+[go back](#Documentation/_README.md)

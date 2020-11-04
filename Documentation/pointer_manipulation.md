@@ -10,5 +10,14 @@ When `*` is used, the pointer's position will change to that of the current cell
 ```
 ##### `=> 2 0 [0]`
 
+#
 
-[go back](https://repl.it/@realTronsi/BrainF#Documentation/_README.md)
+You can use `?` to set the current cell value to the position of the pointer
+
+```
+>>>?
+```
+##### `=> 0 0 0 [3]`
+
+
+[go back](#Documentation/_README.md)

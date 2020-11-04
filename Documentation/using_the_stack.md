@@ -10,7 +10,7 @@ This will push the value of 2 to the stack. You can push as many to the stack as
 
 ```
 ++^
-[-] clears all
+[-] clears
 _
 ```
 ##### `=> [2]`
@@ -28,8 +28,16 @@ _> this is 1
 ```
 ##### `=> 3 2 [1]`
 
+You can use `!` to push to the **end** of the stack or get the **last** value from the stack instead of the first:
+
+```
+!^ pushes current value to end of stack
+!_ gets the last value from the stack
+```
+
 #
 
-You can perform operations via the stack as well using the backtick, you can read on it [here](https://repl.it/@realTronsi/BrainF-#Documentation/env.md)
+You can perform operations via the stack as well using the backtick, you can read on it [here](#Documentation/env.md)
 
-[go back](https://repl.it/@realTronsi/BrainF#Documentation/_README.md)
+
+[go back](#Documentation/_README.md)

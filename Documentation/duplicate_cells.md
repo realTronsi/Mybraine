@@ -3,27 +3,13 @@
 You can duplicate cells using this very handy code:
 
 ```
-[->+>+<<]
+^>_
 ```
-
-This will copy the current cell into the next to cells on the right and delete the starting cell
-
-```
-++
-[->+>+<<]
->>
-```
-##### `=> 0 2 [2]`
-
-If you want to keep the starting cell, you can do the reverse process:
+This pushes the cell into the stack, moves over to the left, then releases it again
 
 ```
-++
-[->+>+<<]
->[-]>
-[-<+<+>>]
-<
+++^>_
 ```
 ##### `=> 2 [2]`
 
-[go back](https://repl.it/@realTronsi/BrainF#Documentation/_README.md)
+[go back](#Documentation/_README.md)

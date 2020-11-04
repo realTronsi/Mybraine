@@ -31,4 +31,4 @@ If you defined multiple functions, the previous one will be overwritten:
 ```
 ##### `=> [-1]`
 
-[go back](https://repl.it/@realTronsi/BrainF#Documentation/_README.md)
+[go back](#Documentation/_README.md)

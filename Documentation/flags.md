@@ -28,4 +28,4 @@ We set the current cell value to 2, then we use `*` to jump to the second flag
 
 If we had jumped to any other flag, the program would have ended and **2** would not have been printed out in the console
 
-[go back](https://repl.it/@realTronsi/BrainF#Documentation/_README.md)
+[go back](#Documentation/_README.md)

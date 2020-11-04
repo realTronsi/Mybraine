@@ -1,3 +1,6 @@
-+^ Push 1 to the stack
-` Go into stack mode
-+ Adds current cell and first stack together
++++++ set 5 to first cell
+>>> go to third position
+?^ add pointer position to stack
+[-]*^ go to first cell and push its value to the stack
+!_* return to third position
+_
