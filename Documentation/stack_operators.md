@@ -19,6 +19,8 @@ such as `+` or `?`
 | ? | Sets current cell to value of first element in stack without removing it from the stack |
 | ! | Reverses operator direction, see [here](#Documentation/reverse_operator.md) |
 | & | Clears stack |
+| < | Less than [more here](#Documentation/comparative_operators.md)|
+| > | Greater than [more here](#Documentation/comparative_operators.md)|
 
 
 

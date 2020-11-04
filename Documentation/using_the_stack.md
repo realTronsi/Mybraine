@@ -32,7 +32,7 @@ You can use `!` to push to the **end** of the stack or get the **last** value fr
 
 ```
 !^ pushes current value to end of stack
-!_ gets the last value from the stack
+!_ releases the last value from the stack
 ```
 
 #

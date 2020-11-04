@@ -1,5 +1,4 @@
 const fs = require("fs")
-
 const lex = require("./interpreter/Lexer/lexer")
 
 fs.readFile("main.bfm", "utf-8", (err, data)=>{

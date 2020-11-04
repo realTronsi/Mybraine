@@ -8,6 +8,8 @@
 
 It is expected you know about BrainF's syntax first, and you can find a great tutorial [here](https://gist.github.com/roachhd/dce54bec8ba55fb17d3a)
 
+★ All Characters Cheat Sheet [here](#Documentation/cheat_sheet.md) ★
+
 - [Functions](#Documentation/functions.md)
 - [Pointer Manipulation](#Documentation/pointer_manipulation.md)
 - [Flags](#Documentation/flags.md)
