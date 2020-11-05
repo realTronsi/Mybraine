@@ -1,8 +1,10 @@
-# BrainF-
+# Mybraine
 
 ## Overview
 
-**BrainF-** is a superset of BrainF, with more features such as functions and "flags". You can now write BrainF code without losing all of your braincells.
+**Mybraine** is a superset of BrainF, with more features such as functions and "flags". You can now write BrainF code without losing all of your braincells.
+
+> This esoteric language is named off of "Migraine" and is pronounced the same way with a silent "e"
 
 ## Docs
 

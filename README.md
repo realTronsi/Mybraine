@@ -1,3 +1,3 @@
-# BrainF-
+# Mybraine
 
-### Go [here](https://repl.it/@realTronsi/BrainF#Documentation/_README.md) for documentation
+### Go [here](#Documentation/_README.md) for documentation
