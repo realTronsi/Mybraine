@@ -48,3 +48,4 @@ These are some tips or tricks that will come in handy
 - **v1.4** *More reverse operator functionality*
 - **v1.5** *Introduced comparative stack operations*
 - **v1.6** *Introduced relative stack with a new character* `~`
+- **v1.7** *Introduced a new comparative stack operator character* `=`
