@@ -4,11 +4,15 @@ You can use `~` to toggle between normal and relative stack. With relative stack
 
 ```
 +>++>+++
->~^ will push the 0th index to the stack since the current cell is 0
+>~^ push the 0th cell to the stack since current cell is 0
 _
 ```
 ##### `=> 1 2 3 [1]`
 
-This applies to `^`, `_`, and `?` as of **v1.6**
+This applies to `^`, `_`, and `?` as well
+
+```
+++~_ releases 2nd value from stack
+```
 
 [go back](#Documentation/env.md)

@@ -370,6 +370,19 @@ function handleOpr(t, TOKENS) {
       STK[p]--
     }
   }
+  if (TOKENS[t].val == "=") {
+    if (stk_mode) {
+      if (prev.val == "!") {
+        if (stack[0]) {
+          stack[0] = (Number(STK[p] == (stack[0] || 0)))
+        }
+      } else {
+        STK[p] = (Number(STK[p] == (stack[0] || 0)))
+      }
+    } else {
+      STK[p] = 0
+    }
+  }
 }
 
 function printSTK() {

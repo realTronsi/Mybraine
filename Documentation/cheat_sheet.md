@@ -26,5 +26,6 @@
 |&|Clears all cells [more here](#Documentation/clear_cells.md)|Clears entire stack [more here](#Documentation/stack_operators.md)|
 |!|Reverse operator, reverses many operations [more here](#Documentation/reverse_operator.md)|Reverses many operations [more here](#Documentation/reverse_operator.md)|
 |~|Relative stack toggle [more here](#Documentation/relative_stack.md)|NA|
+|=|Makes current cell 0|Equal to operator [more here](#Documentation/stack_operators.md)|
 
 [go back](#Documentation/_README.md)

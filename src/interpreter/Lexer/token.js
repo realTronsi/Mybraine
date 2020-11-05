@@ -32,6 +32,8 @@ function matchType(val){
     "*": "mv-p",
     "+": "opr",
     "-": "opr",
+    "!": "opr",
+    "=": "opr",
     "[": "whl",
     "]": "whl",
     ".": "io",
@@ -48,8 +50,7 @@ function matchType(val){
     "^": "stk",
     "_": "stk",
     "?": "ptr",
-    "&": "ptr",
-    "!": "ptr"
+    "&": "ptr"
   }
   return KEY[val]
 }

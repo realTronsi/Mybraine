@@ -21,6 +21,7 @@ such as `+` or `?`
 | & | Clears stack |
 | < | Less than [more here](#Documentation/comparative_operators.md)|
 | > | Greater than [more here](#Documentation/comparative_operators.md)|
+| = | Equal to [more here](#Documentation/comparative_operators.md)|
 
 
 

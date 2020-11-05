@@ -30,8 +30,8 @@ These are some tips or tricks that will come in handy
 - [Flags with Functions](#Documentation/flags_w_functions.md)
 - [Break from Loops](#Documentation/break_from_loops.md)
 - [If Statements](#Documentation/if_statements.md)
-- [Duplicating Cells](#Documentation/duplicate_cells.md)
 - [Pointer Jumping](#Documentation/pointer_jumping.md)
+- [Duplicating Cells](#Documentation/duplicate_cells.md)
 
 > Some tips and tricks may be outdated or deprecated, if this is the case, please let me know!
 

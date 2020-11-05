@@ -14,4 +14,7 @@ _
 
 This script goes to the third position, jumps to the first position and takes the value of the first cell and jumps back. This can work for any interval of positions, and is very useful.
 
+### `As of v1.6, use` [`this`](#Documentation/relative_stack.md)
+### `for pointer jumping for pushing to the stack`
+
 [go back](#Documentation/_README.md)

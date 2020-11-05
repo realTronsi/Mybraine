@@ -1,6 +1,6 @@
 # Fibonacci
 
-Here is an example code for the fibonacci sequence in BrainF-
+Here is an example code for the fibonacci sequence in Mybraine
 
 ```
 /,[\>\]\$\|>+<-[\>\]\$\|>>+<<-[\>\]\$\|[>^>!^`+`>_<<_<-]
