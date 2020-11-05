@@ -298,6 +298,8 @@ function handleMvP(t, TOKENS) {
           } else {
             STK[p] = Number(STK[p] > (stack[0] || 0))
           }
+        } else if(rel_mode){
+          stack.splice(0, 0, stack.pop())
         } else {
           p++
         }
@@ -315,6 +317,8 @@ function handleMvP(t, TOKENS) {
           } else {
             STK[p] = Number(STK[p] < (stack[0] || 0))
           }
+        } else if(rel_mode){
+          stack = stack.concat(stack.shift())
         } else {
           p--
         }

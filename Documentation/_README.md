@@ -4,7 +4,7 @@
 
 **Mybraine** is a superset of BrainF, with more features such as functions and "flags". You can now write BrainF code without losing all of your braincells.
 
-> This esoteric language is named off of "Migraine" and is pronounced the same way with a silent "e"
+> This esoteric language is named off of "Migraine"
 
 ## Docs
 
@@ -20,6 +20,7 @@ It is expected you know about BrainF's syntax first, and you can find a great tu
 - [Force Quit](#Documentation/force_quit.md)
 - [Clear Cells](#Documentation/clear_cells.md)
 - [Reverse Operator](#Documentation/reverse_operator.md)
+- [Stack Shifting](#Documentation/stack_shifting.md)
 
 > Some documentation may be outdated or deprecated, if this is the case, please let me know!
 
@@ -45,7 +46,8 @@ These are some tips or tricks that will come in handy
 - **v1.1** *Introduced stack and two new characters* `^ _`
 - **v1.2** *Introduced stack operations and a new character* `backtick`
 - **v1.3** *Introduced new stack operations and new characters* `? ! &`
-- **v1.4** *More reverse operator functionality*
+- **v1.4** *Concept of reverse operator*
 - **v1.5** *Introduced comparative stack operations*
 - **v1.6** *Introduced relative stack with a new character* `~`
 - **v1.7** *Introduced a new comparative stack operator character* `=`
+- **v1.8** *Introduced stack shifting*

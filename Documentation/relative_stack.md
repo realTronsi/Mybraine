@@ -15,4 +15,26 @@ This applies to `^`, `_`, and `?` as well
 ++~_ releases 2nd value from stack
 ```
 
+#
+
+Inside relative mode, you can also shift the stack.
+
+```
++^+^+^
+```
+we add three values to the stack which makes it look like this:
+`3, 2, 1`
+
+Now we can go into relative stack and **shift** the entire stack over using `<` and/or `>`
+
+```
++^+^+^~<~
+```
+Now the stack will look like this:
+`2, 1, 3`
+
+As you can see the stack was shifted to the left, and vice versa for `>`.
+
+More on stack shifting [here](#Documentation/stack_shifting.md)
+
 [go back](#Documentation/env.md)
